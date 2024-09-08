@@ -1,0 +1,153 @@
+<p>Signals = Property + Change Notification</p>
+
+<h1>Change Detection & Zone JS Library</h1>
+
+<hr />
+<h2 class="text-2xl font-bold text-gray-700 mb-4">Count Function</h2>
+<div class="flex flex-col items-center justify-center space-y-4">
+  <h3 class="text-3xl font-semibold text-gray-800">{{ count() }}</h3>
+
+  <div class="flex space-x-4">
+    <!-- Add Button -->
+    <button
+      class="py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition duration-300"
+      (click)="onCount()"
+    >
+      Add
+    </button>
+
+    <!-- Minus Button -->
+    <button
+      class="py-2 px-4 bg-red-500 text-white font-semibold rounded-lg shadow-md hover:bg-red-700 transition duration-300"
+      (click)="onDecrease()"
+    >
+      Minus
+    </button>
+  </div>
+</div>
+<hr />
+<h2 class="text-2xl font-bold text-gray-700 mb-4">Signal Mutated</h2>
+<div class="bg-gray-200 p-4 rounded-lg shadow-md">
+  <h2 class="text-xl font-bold mb-2">Mutate</h2>
+  <p class="text-gray-700">
+    Modifies the content of an array by value. Use it with arrays to modify
+    array elements and objects to modify object properties.
+  </p>
+</div>
+
+<!-- app.component.html -->
+
+<div class="bg-gray-100 p-6 rounded-lg shadow-md">
+  <h2 class="text-xl font-bold mb-4">Mutate</h2>
+
+  <!-- Employee Table -->
+  <table class="w-full border-collapse">
+    <thead>
+      <tr>
+        <th class="border p-2">#</th>
+        <th class="border p-2">Name</th>
+        <th class="border p-2">Position</th>
+        <th class="border p-2">Department</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of employees()">
+        <td class="border p-2">{{ employee.id }}</td>
+        <td class="border p-2">{{ employee.name }}</td>
+        <td class="border p-2">{{ employee.position }}</td>
+        <td class="border p-2">{{ employee.department }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Button to toggle form visibility -->
+  <div class="mt-4">
+    <button
+      class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+      (click)="toggleForm()"
+    >
+      + Add Employee
+    </button>
+  </div>
+
+  <!-- Form appears only when formVisible is true -->
+  <div *ngIf="formVisible()" class="mt-4 p-3 border border-blue-300 rounded-sm">
+    <div class="flex gap-x-3">
+      <input
+        type="text"
+        class="w-1/4 mt-2 p-2 border rounded"
+        placeholder="Name"
+        [(ngModel)]="newName"
+      />
+      <input
+        type="text"
+        class="w-1/4 mt-2 p-2 border rounded"
+        placeholder="Enter Position"
+        [(ngModel)]="newPosition"
+      />
+      <input
+        type="text"
+        class="w-1/4 mt-2 p-2 border rounded"
+        placeholder="Enter Department"
+        [(ngModel)]="newDepartment"
+      />
+    </div>
+    <div class="mt-4 flex space-x-2">
+      <button
+        class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+        (click)="addEmployee()"
+      >
+        Save
+      </button>
+      <button
+        class="px-4 py-2 bg-gray-400 text-white rounded hover:bg-gray-500"
+        (click)="clearForm()"
+      >
+        Cancel
+      </button>
+    </div>
+  </div>
+</div>
+
+<br />
+<hr />
+<h2>Signal using object:</h2>
+<div class="bg-gray-100 p-6 rounded-lg shadow-md">
+  <h2 class="text-xl font-bold mb-4">Mutate</h2>
+
+  <!-- Employee Table -->
+  <table class="w-full border-collapse">
+    <thead>
+      <tr>
+        <th class="border p-2">#</th>
+        <th class="border p-2">Name</th>
+        <th class="border p-2">Brand</th>
+        <th class="border p-2">Price</th>
+        <th class="border p-2">Quantity</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="border p-2">{{ product().id }}</td>
+        <td class="border p-2">{{ product().name }}</td>
+        <td class="border p-2">{{ product().brand }}</td>
+        <td class="border p-2">{{ product().price }}</td>
+        <td class="border p-2">{{ product().quantity }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Button to toggle form visibility -->
+  <div class="mt-4">
+    <button
+      class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+      (click)="changeProductName()"
+    >
+      Change Product Name
+    </button>
+  </div>
+</div>
+
+<br />
+<hr />
+<h2>Signal Effect</h2>

@@ -1,0 +1,348 @@
+<!-- 
+(click): Triggered when a user clicks on an element.
+(keydown): Triggered when a user presses a key on the keyboard.
+(mouseup): Triggered when the user releases the mouse button over an element.
+(mouseover): Triggered when the mouse pointer enters an element.
+(mouseout): Triggered when the mouse pointer leaves an element.
+(submit): Triggered when a form is submitted.
+(focus): Triggered when an element gains focus.
+(blur): Triggered when an element loses focus.
+(change): Triggered when the value of an element changes.
+(scroll): Triggered when the user scrolls the page.
+(load): Triggered when the page finishes loading.
+(unload): Triggered when a page is unloaded.
+(resize): Triggered when the window is resized.
+
+(dblclick): Triggered when a user double-clicks on an element.
+(contextmenu): Triggered when the user right-clicks on an element.
+(drag): Triggered when an element is being dragged.
+(drop): Triggered when a dragged element is dropped onto a target element.
+(mouseenter): Triggered when the mouse pointer enters an element.
+(mouseleave): Triggered when the mouse pointer leaves an element.
+(touchstart): Triggered when the user touches their screen.
+(touchmove): Triggered when the user moves their finger on the screen.
+(keydown.<key>): Triggered when a specific key is pressed (e.g., (keydown.enter)).
+(keyup.<key>): Triggered when a specific key is released (e.g., (keyup.enter)).
+(input): Triggered when there’s an input into a form field.
+(window:scroll): Triggered when the user scrolls the window.
+(window:resize): Triggered when the window is resized.
+
+(keypress): Triggered when the user presses a key on the keyboard (deprecated in favor of keydown and keyup).
+(keyup): Triggered when the user releases a key on the keyboard.
+(mousedown): Triggered when the mouse button is pressed over an element.
+(mousemove): Triggered when the mouse is moved within an element.
+(wheel): Triggered when the mouse wheel is scrolled.
+(touchend): Triggered when the user removes their finger from the screen.
+(touchcancel): Triggered when the touch is canceled.
+(beforeunload): Triggered before a page is unloaded or closed by the user.
+(animationstart): Triggered when a CSS animation starts.
+(animationend): Triggered when a CSS animation ends.
+(animationiteration): Triggered when a CSS animation is repeated.
+(transitionend): Triggered when a CSS transition ends.
+(focusin): Triggered when an element or its descendant gains focus.
+(focusout): Triggered when an element or its descendant loses focus.
+(copy): Triggered when the user copies content to the clipboard.
+(cut): Triggered when the user cuts content to the clipboard.
+(paste): Triggered when the user pastes content from the clipboard.
+(error): Triggered when an error occurs during the loading of a resource (e.g., an image).
+(select): Triggered when the user selects some text in an input field.
+(dragstart): Triggered when the user starts dragging an element.
+(dragend): Triggered when the dragging of an element ends.
+(dragenter): Triggered when a dragged element enters a drop target.
+(dragleave): Triggered when a dragged element leaves a drop target.
+-->
+
+<div class="container mx-auto py-10">
+  <div
+    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+  >
+    <!-- Click Event -->
+    <div class="bg-blue-100 p-6 rounded-lg shadow-lg">
+      <h3 class="text-xl font-bold mb-2">Click Event</h3>
+      <p>(click): Triggered when a user clicks on an element.</p>
+    </div>
+
+    <!-- Keydown Event -->
+    <div class="bg-green-100 p-6 rounded-lg shadow-lg">
+      <h3 class="text-xl font-bold mb-2">Keydown Event</h3>
+      <p>(keydown): Triggered when a user presses a key on the keyboard.</p>
+    </div>
+
+    <!-- Mouseup Event -->
+    <div class="bg-yellow-100 p-6 rounded-lg shadow-lg">
+      <h3 class="text-xl font-bold mb-2">Mouseup Event</h3>
+      <p>
+        (mouseup): Triggered when the user releases the mouse button over an
+        element.
+      </p>
+    </div>
+
+    <!-- Mouseover Event -->
+    <div class="bg-purple-100 p-6 rounded-lg shadow-lg">
+      <h3 class="text-xl font-bold mb-2">Mouseover Event</h3>
+      <p>(mouseover): Triggered when the mouse pointer enters an element.</p>
+    </div>
+
+    <!-- Mouseout Event -->
+    <div class="bg-pink-100 p-6 rounded-lg shadow-lg">
+      <h3 class="text-xl font-bold mb-2">Mouseout Event</h3>
+      <p>(mouseout): Triggered when the mouse pointer leaves an element.</p>
+    </div>
+
+    <!-- Submit Event -->
+    <div class="bg-indigo-100 p-6 rounded-lg shadow-lg">
+      <h3 class="text-xl font-bold mb-2">Submit Event</h3>
+      <p>(submit): Triggered when a form is submitted.</p>
+    </div>
+
+    <!-- Focus Event -->
+    <div class="bg-red-100 p-6 rounded-lg shadow-lg">
+      <h3 class="text-xl font-bold mb-2">Focus Event</h3>
+      <p>(focus): Triggered when an element gains focus.</p>
+    </div>
+
+    <!-- Blur Event -->
+    <div class="bg-teal-100 p-6 rounded-lg shadow-lg">
+      <h3 class="text-xl font-bold mb-2">Blur Event</h3>
+      <p>(blur): Triggered when an element loses focus.</p>
+    </div>
+
+    <!-- Change Event -->
+    <div class="bg-orange-100 p-6 rounded-lg shadow-lg">
+      <h3 class="text-xl font-bold mb-2">Change Event</h3>
+      <p>(change): Triggered when the value of an element changes.</p>
+    </div>
+
+    <!-- Scroll Event -->
+    <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+      <h3 class="text-xl font-bold mb-2">Scroll Event</h3>
+      <p>(scroll): Triggered when the user scrolls the page.</p>
+    </div>
+
+    <!-- Load Event -->
+    <div class="bg-blue-100 p-6 rounded-lg shadow-lg">
+      <h3 class="text-xl font-bold mb-2">Load Event</h3>
+      <p>(load): Triggered when the page finishes loading.</p>
+    </div>
+
+    <!-- Unload Event -->
+    <div class="bg-green-100 p-6 rounded-lg shadow-lg">
+      <h3 class="text-xl font-bold mb-2">Unload Event</h3>
+      <p>(unload): Triggered when a page is unloaded.</p>
+    </div>
+
+    <!-- Resize Event -->
+    <div class="bg-yellow-100 p-6 rounded-lg shadow-lg">
+      <h3 class="text-xl font-bold mb-2">Resize Event</h3>
+      <p>(resize): Triggered when the window is resized.</p>
+    </div>
+
+    <!-- Double Click Event -->
+    <div class="bg-purple-100 p-6 rounded-lg shadow-lg">
+      <h3 class="text-xl font-bold mb-2">Double Click Event</h3>
+      <p>(dblclick): Triggered when a user double-clicks on an element.</p>
+    </div>
+
+    <!-- Context Menu Event -->
+    <div class="bg-pink-100 p-6 rounded-lg shadow-lg">
+      <h3 class="text-xl font-bold mb-2">Context Menu Event</h3>
+      <p>(contextmenu): Triggered when the user right-clicks on an element.</p>
+    </div>
+
+    <!-- Drag Event -->
+    <div class="bg-indigo-100 p-6 rounded-lg shadow-lg">
+      <h3 class="text-xl font-bold mb-2">Drag Event</h3>
+      <p>(drag): Triggered when an element is being dragged.</p>
+    </div>
+
+    <!-- Drop Event -->
+    <div class="bg-red-100 p-6 rounded-lg shadow-lg">
+      <h3 class="text-xl font-bold mb-2">Drop Event</h3>
+      <p>
+        (drop): Triggered when a dragged element is dropped onto a target
+        element.
+      </p>
+    </div>
+
+    <!-- Mouse Enter Event -->
+    <div class="bg-teal-100 p-6 rounded-lg shadow-lg">
+      <h3 class="text-xl font-bold mb-2">Mouse Enter Event</h3>
+      <p>(mouseenter): Triggered when the mouse pointer enters an element.</p>
+    </div>
+
+    <!-- Mouse Leave Event -->
+    <div class="bg-orange-100 p-6 rounded-lg shadow-lg">
+      <h3 class="text-xl font-bold mb-2">Mouse Leave Event</h3>
+      <p>(mouseleave): Triggered when the mouse pointer leaves an element.</p>
+    </div>
+
+    <!-- Touchstart Event -->
+    <div class="bg-blue-100 p-6 rounded-lg shadow-lg">
+      <h3 class="text-xl font-bold mb-2">Touchstart Event</h3>
+      <p>(touchstart): Triggered when the user touches their screen.</p>
+    </div>
+
+    <!-- Touchmove Event -->
+    <div class="bg-green-100 p-6 rounded-lg shadow-lg">
+      <h3 class="text-xl font-bold mb-2">Touchmove Event</h3>
+      <p>
+        (touchmove): Triggered when the user moves their finger on the screen.
+      </p>
+    </div>
+
+    <!-- Keydown Specific Key Event -->
+    <div class="bg-yellow-100 p-6 rounded-lg shadow-lg">
+      <h3 class="text-xl font-bold mb-2">Keydown Specific Key Event</h3>
+      <p>
+        (keydown.enter): Triggered when a specific key is pressed (e.g., Enter).
+      </p>
+    </div>
+
+    <!-- Keyup Specific Key Event -->
+    <div class="bg-purple-100 p-6 rounded-lg shadow-lg">
+      <h3 class="text-xl font-bold mb-2">Keyup Specific Key Event</h3>
+      <p>
+        (keyup.enter): Triggered when a specific key is released (e.g., Enter).
+      </p>
+    </div>
+
+    <!-- Input Event -->
+    <div class="bg-pink-100 p-6 rounded-lg shadow-lg">
+      <h3 class="text-xl font-bold mb-2">Input Event</h3>
+      <p>(input): Triggered when there’s an input into a form field.</p>
+    </div>
+
+    <!-- Window Scroll Event -->
+    <div class="bg-indigo-100 p-6 rounded-lg shadow-lg">
+      <h3 class="text-xl font-bold mb-2">Window Scroll Event</h3>
+      <p>(window:scroll): Triggered when the user scrolls the window.</p>
+    </div>
+
+    <!-- Window Resize Event -->
+    <div class="bg-red-100 p-6 rounded-lg shadow-lg">
+      <h3 class="text-xl font-bold mb-2">Window Resize Event</h3>
+      <p>(window:resize): Triggered when the window is resized.</p>
+    </div>
+
+    <!-- Keypress Event -->
+    <div class="bg-teal-100 p-6 rounded-lg shadow-lg">
+      <h3 class="text-xl font-bold mb-2">Keypress Event</h3>
+      <p>
+        (keypress): Triggered when the user presses a key on the keyboard
+        (deprecated in favor of keydown and keyup).
+      </p>
+    </div>
+
+    <!-- Keyup Event -->
+    <div class="bg-orange-100 p-6 rounded-lg shadow-lg">
+      <h3 class="text-xl font-bold mb-2">Keyup Event</h3>
+      <p>(keyup): Triggered when the user releases a key on the keyboard.</p>
+    </div>
+
+    <!-- Mousedown Event -->
+    <div class="bg-blue-100 p-6 rounded-lg shadow-lg">
+      <h3 class="text-xl font-bold mb-2">Mousedown Event</h3>
+      <p>
+        (mousedown): Triggered when the mouse button is pressed over an element.
+      </p>
+    </div>
+
+    <!-- Mousemove Event -->
+    <div class="bg-green-100 p-6 rounded-lg shadow-lg">
+      <h3 class="text-xl font-bold mb-2">Mousemove Event</h3>
+      <p>(mousemove): Triggered when the mouse is moved within an element.</p>
+    </div>
+  </div>
+</div>
+
+<hr />
+
+<div
+  class="container mx-auto py-10 px-4 bg-gradient-to-b from-blue-50 via-white to-blue-100 min-h-screen"
+>
+  <p class="text-lg font-medium mb-4 text-center text-gray-600">
+    Event Binding: View to Component
+  </p>
+
+  <h1 class="text-3xl font-bold mb-6 text-center text-blue-600">
+    Interactive Event Cards
+  </h1>
+
+  <!-- Flexbox Row Layout -->
+  <div class="flex flex-wrap justify-center space-x-6 space-y-6">
+    <!-- Click Count Card -->
+    <div
+      class="bg-white p-8 rounded-lg shadow-lg max-w-xs w-full text-center transform hover:scale-105 transition-transform duration-300"
+    >
+      <h1 class="text-5xl font-extrabold text-gray-800 mb-6">{{ count }}</h1>
+      <button
+        (click)="onClickMe()"
+        type="button"
+        class="py-3 px-6 bg-blue-600 hover:bg-blue-700 text-white text-lg font-semibold rounded-lg shadow-md transition-all duration-300 ease-in-out transform hover:scale-105"
+      >
+        Click Me
+      </button>
+    </div>
+
+    <!-- Change Value Card -->
+    <div
+      class="bg-white p-8 rounded-lg shadow-lg max-w-xs w-full text-center transform hover:scale-105 transition-transform duration-300"
+    >
+      <h1 class="text-5xl font-extrabold text-gray-800 mb-6">{{ value }}</h1>
+      <button
+        (click)="onChangeValue('Value Changed')"
+        type="button"
+        class="py-3 px-6 bg-green-600 hover:bg-green-700 text-white text-lg font-semibold rounded-lg shadow-md transition-all duration-300 ease-in-out transform hover:scale-105"
+      >
+        Change Value
+      </button>
+    </div>
+
+    <!-- Event Data Card -->
+    <div
+      class="bg-white p-8 rounded-lg shadow-lg max-w-xs w-full text-center transform hover:scale-105 transition-transform duration-300"
+    >
+      <h1 class="text-2xl font-bold text-gray-800 mb-4">Event Data</h1>
+      <h1 class="text-4xl font-extrabold mb-6 text-blue-600">{{ value2 }}</h1>
+      <input
+        (input)="inputChange($event)"
+        type="text"
+        class="py-3 px-4 focus:outline-none focus:ring-4 focus:ring-blue-300 rounded-lg shadow-md w-full mb-4"
+        placeholder="Enter Name"
+      />
+    </div>
+
+    <!-- Select Change Card -->
+    <div
+      class="bg-white p-8 rounded-lg shadow-lg max-w-xs w-full text-center transform hover:scale-105 transition-transform duration-300"
+    >
+      <h1 class="text-5xl font-extrabold text-gray-800 mb-6">{{ value3 }}</h1>
+      <select
+        (change)="onSelectChange($event)"
+        class="py-3 px-4 bg-white text-gray-700 rounded-lg shadow-md w-full focus:outline-none focus:ring-4 focus:ring-green-300"
+      >
+        <option value="angular">Angular</option>
+        <option value="java">Java</option>
+        <option value="mysql">MySQL</option>
+        <option value="ts">TypeScript</option>
+      </select>
+    </div>
+
+    <!-- Scroll Event Card -->
+    <div
+      class="bg-white p-8 rounded-lg shadow-lg max-w-xs w-full text-center transform hover:scale-105 transition-transform duration-300"
+    >
+      <h1 class="text-2xl font-bold text-gray-800 mb-6">Scroll Event</h1>
+      <div
+        class="h-32 overflow-y-scroll p-4 bg-gray-50 rounded-lg shadow-inner border border-gray-200"
+      >
+        <div
+          *ngFor="let num of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]"
+          class="py-2 text-gray-600"
+        >
+          {{ num }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

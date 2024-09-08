@@ -1,0 +1,95 @@
+<div class="container mx-auto py-8">
+    <!-- Flex Container -->
+    <div class="flex flex-wrap justify-center gap-6">
+      
+      <!-- 1. Display Dynamic Data -->
+      <div class="card bg-white shadow-lg rounded-lg p-6 transform transition-transform hover:translate-y-2 hover:shadow-2xl">
+        <h2 class="text-2xl font-bold mb-4 text-blue-600">1. Display Dynamic Data</h2>
+        <p class="text-sm mb-4 text-gray-600">This shows how to bind and display dynamic data in the template using Angular interpolation.</p>
+        <p>{{ employee }}</p>
+        <div class="mt-2">
+          <h1 class="text-lg font-semibold">{{ emp.name }}</h1>
+          <h1 class="text-lg">{{ emp.position }}</h1>
+        </div>
+      </div>
+  
+      <!-- 2. String Concatenation -->
+      <div class="card bg-white shadow-lg rounded-lg p-6 transform transition-transform hover:translate-y-2 hover:shadow-2xl">
+        <h2 class="text-2xl font-bold mb-4 text-blue-600">2. String Concatenation</h2>
+        <p class="text-sm mb-4 text-gray-600">You can concatenate strings with dynamic values using the `+` operator within interpolation.</p>
+        <h1>{{ "My name is: " + emp.name }}</h1>
+      </div>
+  
+      <!-- 3. Calculations -->
+      <div class="card bg-white shadow-lg rounded-lg p-6 transform transition-transform hover:translate-y-2 hover:shadow-2xl">
+        <h2 class="text-2xl font-bold mb-4 text-blue-600">3. Calculations</h2>
+        <p class="text-sm mb-4 text-gray-600">You can perform calculations within interpolation, like multiplication, division, and more.</p>
+        <h3>{{ "Multiplication: " + 5 * 2 }}</h3>
+        <h3>{{ "Addition: " + (5 + 2) }}</h3>
+        <h3>{{ "Division: " + 5 / 2 }}</h3>
+        <h3>{{ "Subtraction: " + (5 - 2) }}</h3>
+        <h3>{{ "Total: " + price * quantity }}</h3>
+      </div>
+  
+      <!-- 4. Built-in JS Methods -->
+      <div class="card bg-white shadow-lg rounded-lg p-6 transform transition-transform hover:translate-y-2 hover:shadow-2xl">
+        <h2 class="text-2xl font-bold mb-4 text-blue-600">4. Built-in JS Methods</h2>
+        <p class="text-sm mb-4 text-gray-600">You can use JavaScript's built-in methods, like `slice()`, `length`, and more, inside Angular templates.</p>
+        <h1>{{ "Length of employee: " + employee.length }}</h1>
+        <h1>{{ "Slice of employee: " + employee.slice(2, 3) }}</h1>
+        <ul class="list-disc pl-6 text-sm">
+          <li>toUpperCase(): Converts a string to uppercase.</li>
+          <li>toLowerCase(): Converts a string to lowercase.</li>
+          <li>length: Returns the length of a string.</li>
+          <li>slice(): Extracts a portion of a string.</li>
+          <li>indexOf(): Finds the index of a substring.</li>
+          <li>includes(): Checks if a string contains a specific substring.</li>
+        </ul>
+      </div>
+  
+      <!-- 5. Display Method Result -->
+      <div class="card bg-white shadow-lg rounded-lg p-6 transform transition-transform hover:translate-y-2 hover:shadow-2xl">
+        <h2 class="text-2xl font-bold mb-4 text-blue-600">5. Display Method Result</h2>
+        <p class="text-sm mb-4 text-gray-600">You can call methods inside the template and display their return values.</p>
+        <h2>{{ "Total Calculation: " + calculateTotal() }}</h2>
+        <h2>{{ "Tax Calculation: " + calculateTax().toFixed(2) + "%" }}</h2>
+      </div>
+  
+      <!-- 6. Ternary Conditional Operator -->
+      <div class="card bg-white shadow-lg rounded-lg p-6 transform transition-transform hover:translate-y-2 hover:shadow-2xl">
+        <h2 class="text-2xl font-bold mb-4 text-blue-600">6. Ternary Conditional Operator</h2>
+        <p class="text-sm mb-4 text-gray-600">Ternary operators allow you to conditionally display values in the template.</p>
+        <button
+          (click)="toggleButton()"
+          class="py-2 px-4 text-white rounded bg-blue-500 hover:bg-blue-600">
+          {{ isEditable ? "Update" : "Save" }}
+        </button>
+      </div>
+  
+      <!-- 7. Where Not to Use Interpolation -->
+      <div class="card bg-white shadow-lg rounded-lg p-6 transform transition-transform hover:translate-y-2 hover:shadow-2xl">
+        <h2 class="text-2xl font-bold mb-4 text-blue-600">7. Where Not to Use Interpolation</h2>
+        <p class="text-sm mb-4 text-gray-600">Avoid using interpolation in attributes, as it may lead to errors. Interpolation is not supported in attribute bindings and certain properties like `href`, `src`, or `style`. Instead, use property binding for such cases.</p>
+        
+        <!-- Incorrect Example -->
+        <h3 class="text-xl font-bold mb-2">Incorrect Usage:</h3>
+        <p class="bg-red-100 p-2 rounded text-red-500">
+          <!-- Using interpolation in `href` or `src` will cause an error -->
+          <code>&lt;a href="{{ 'link' }}"&gt;Click here&lt;/a&gt;</code>
+        </p>
+        
+        <p class="text-sm mb-4 text-gray-600">The example above would throw an error because Angular doesn't support interpolation in attributes such as `href` or `src`.</p>
+        
+        <!-- Correct Example -->
+        <h3 class="text-xl font-bold mb-2">Correct Usage:</h3>
+        <p class="bg-green-100 p-2 rounded text-green-500">
+          <!-- Use property binding instead -->
+          <code>&lt;a [href]="link"&gt;Click here&lt;/a&gt;</code>
+        </p>
+      
+        <p class="text-sm text-gray-600">In this example, property binding (`[href]`) is used to bind dynamic values to attributes, which is the correct approach.</p>
+      </div>
+      
+    </div>
+  </div>
+  
